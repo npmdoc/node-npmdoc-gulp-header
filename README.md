@@ -1,9 +1,14 @@
-# api documentation for  [gulp-header (v1.8.8)](https://github.com/tracker1/gulp-header#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-header.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-header) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-header.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-header)
-#### Gulp extension to add header to file(s) in the pipeline.
+# npmdoc-gulp-header
 
-[![NPM](https://nodei.co/npm/gulp-header.png?downloads=true)](https://www.npmjs.com/package/gulp-header)
+api documentation for  [gulp-header (v1.8.8)](https://github.com/tracker1/gulp-header#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-header.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-header) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-header.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-header)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-header/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-header_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-header/build..beta..travis-ci.org/apidoc.html)
+Gulp extension to add header to file(s) in the pipeline.
+
+[![NPM](https://nodei.co/npm/gulp-header.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-header)
+
+- [https://npmdoc.github.io/node-npmdoc-gulp-header/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-header/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-header/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-header/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-header/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Michael J. Ryan",
-        "email": "mxryan@godaddy.com",
         "url": "http://github.com/tracker1"
     },
     "bugs": {
@@ -31,7 +35,6 @@
         },
         {
             "name": "Douglas Duteil",
-            "email": "douglasduteil@gmail.com",
             "url": "http://github.com/douglasduteil"
         }
     ],
@@ -68,14 +71,12 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "tracker1",
-            "email": "tracker1@gmail.com"
+            "name": "tracker1"
         }
     ],
     "name": "gulp-header",
     "optionalDependencies": {},
     "proxy": null,
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/tracker1/gulp-header.git"
@@ -89,16 +90,6 @@
     "version": "1.8.8"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-header](#apidoc.module.gulp-header)
-
-
-
-# <a name="apidoc.module.gulp-header"></a>[module gulp-header](#apidoc.module.gulp-header)
 
 
 
