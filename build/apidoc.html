@@ -61,12 +61,150 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-header">module gulp-header</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-header.gulp-header">
+            function <span class="apidocSignatureSpan"></span>gulp-header
+            <span class="apidocSignatureSpan">(headerText, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-header.toString">
+            function <span class="apidocSignatureSpan">gulp-header.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-header.toString">module gulp-header.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-header.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-header.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-header" id="apidoc.module.gulp-header">module gulp-header</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-header.gulp-header" id="apidoc.element.gulp-header.gulp-header">
+        function <span class="apidocSignatureSpan"></span>gulp-header
+        <span class="apidocSignatureSpan">(headerText, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-header = function (headerText, data) {
+  headerText = headerText || &#x27;&#x27;;
+
+  function TransformStream(file, enc, cb) {
+    // direct support for gulp-data
+    if (file.data) {
+      data = extend(file.data, data);
+    }
+
+    // format template
+    var filename = path.basename(file.path);
+    var template = data === false ? headerText : gutil.template(headerText, extend({ file: file, filename: filename }, data));
+
+    if (file &#x26;&#x26; typeof file === &#x27;string&#x27;) {
+      this.push(template + file);
+      return cb();
+    }
+
+    // if not an existing file, passthrough
+    if (!isExistingFile(file)) {
+      this.push(file);
+      return cb();
+    }
+
+    // handle file stream;
+    if (file.isStream()) {
+      var stream = through();
+      stream.write(new Buffer(template));
+      stream.on(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+      file.contents = file.contents.pipe(stream);
+      this.push(file);
+      return cb();
+    }
+
+    // variables to handle direct file content manipulation
+    var concat = new Concat(true, filename);
+
+    // add template
+    concat.add(null, new Buffer(template));
+
+    // add sourcemap
+    concat.add(file.relative, file.contents, file.sourceMap);
+
+    // make sure streaming content is preserved
+    if (file.contents &#x26;&#x26; !isStream(file.contents)) {
+      file.contents = concat.content;
+    }
+
+    // apply source map
+    if (concat.sourceMapping) {
+      file.sourceMap = JSON.parse(concat.sourceMap);
+    }
+
+    // make sure the file goes through the next gulp plugin
+    this.push(file);
+
+    // tell the stream engine that we are done with this file
+    cb();
+  }
+
+  return through.obj(TransformStream);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-header.toString" id="apidoc.element.gulp-header.toString">
+        function <span class="apidocSignatureSpan">gulp-header.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-header.toString" id="apidoc.module.gulp-header.toString">module gulp-header.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-header.toString.toString" id="apidoc.element.gulp-header.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-header.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
