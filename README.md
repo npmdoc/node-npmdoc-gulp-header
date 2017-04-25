@@ -1,8 +1,8 @@
 # npmdoc-gulp-header
 
-api documentation for  [gulp-header (v1.8.8)](https://github.com/tracker1/gulp-header#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-header.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-header) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-header.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-header)
+#### basic api documentation for  [gulp-header (v1.8.8)](https://github.com/tracker1/gulp-header#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-header.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-header) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-header.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-header)
 
-Gulp extension to add header to file(s) in the pipeline.
+#### Gulp extension to add header to file(s) in the pipeline.
 
 [![NPM](https://nodei.co/npm/gulp-header.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-header)
 
@@ -87,7 +87,8 @@ Gulp extension to add header to file(s) in the pipeline.
         "publish-patch": "npm version patch && git push origin master && git push --tags",
         "test": "mocha --reporter spec"
     },
-    "version": "1.8.8"
+    "version": "1.8.8",
+    "bin": {}
 }
 ```
 
